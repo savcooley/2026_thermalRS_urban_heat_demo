@@ -1,9 +1,7 @@
-# 2026_thermalRS_urban_heat_demo
-ARSET training: Introduction to Thermal Remote Sensing. Part 2 Demo 1: Nighttime Cooling Patterns During the LA September 2024 Heatwave
-# Demo 2: Nighttime Cooling Patterns During the LA September 2024 Heatwave
 
 **ARSET — Introduction to Thermal Remote Sensing and Applications in Urban Heat Island Mapping**
-Part 2 | NASA Ames Research Center / Bay Area Environmental Research Institute
+Part 2 | Savannah Cooley, NASA Ames Research Center / Bay Area Environmental Research Institute
+# Demo 1: Nighttime Cooling Patterns During the LA September 2024 Heatwave
 
 ---
 
