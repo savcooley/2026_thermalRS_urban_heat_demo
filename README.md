@@ -1,5 +1,6 @@
 
-**ARSET — Introduction to Thermal Remote Sensing and Applications in Urban Heat Island Mapping**
+## **ARSET — Introduction to Thermal Remote Sensing and Applications in Urban Heat Island Mapping**
+
 Part 2 | Savannah Cooley, NASA Ames Research Center / Bay Area Environmental Research Institute
 # Demo 1: Nighttime Cooling Patterns During the LA September 2024 Heatwave
 
