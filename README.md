@@ -71,7 +71,7 @@ Data can be accessed via **NASA AppEEARS** (Earthdata login required):
 5. Set the date range to include your target acquisitions
 6. Download the GeoTIFF outputs
 
-> A step-by-step AppEEARS tutorial is linked on the training webpage.
+> A step-by-step AppEEARS tutorial is available here: https://www.earthdata.nasa.gov/learn/trainings/new-sensor-highlight-ecostress 
 
 ### Notes on the L2T GeoTIFF format
 
