@@ -36,7 +36,20 @@ library(patchwork)   # For combining ggplot panels side-by-side
 # ============================================================================
 # 2. FILE PATHS AND LOAD DATA
 # ============================================================================
-data_dir <- "/Users/sscooley/Documents/ARSET/2026_FY_trainings/Intro_to_thermal_RS/Demos/Demo1_LACounty_LST/Data/Sep4_9_heatwave"
+repo_dir <- "/Users/sscooley/Documents/GitHub/ARSET/2026/"
+
+# Define the Zenodo URL and the local destination path for the zip file
+zip_url <- "https://zenodo.org/records/20090796/files/NASAARSET/2026_thermalRS_urban_heat_demo-init.zip?download=1"
+dest_file <- paste0(repo_dir, "2026_thermalRS_urban_heat_demo-init.zip")
+
+# Download the file using curl
+download.file(url = zip_url, destfile = dest_file, method = "curl")
+
+# Unzip the downloaded file directly into the repo directory
+unzip(zipfile = dest_file, exdir = repo_dir)
+
+# Define the data directory based on the unzipped contents
+data_dir <- paste0(repo_dir, "/2026_thermalRS_urban_heat_demo/ECOSTRESS_L2_data")
 
 # Night 1: Sep 3 11:14 PM PDT (23 hrs into heatwave onset)
 night1 <- list(
