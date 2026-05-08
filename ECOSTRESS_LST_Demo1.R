@@ -36,21 +36,40 @@ library(patchwork)   # For combining ggplot panels side-by-side
 # ============================================================================
 # 2. FILE PATHS AND LOAD DATA
 # ============================================================================
-repo_dir <- "/Users/sscooley/Documents/GitHub/ARSET/2026/"
 
-# Define the Zenodo URL and the local destination path for the zip file
-zip_url <- "https://zenodo.org/records/20090796/files/NASAARSET/2026_thermalRS_urban_heat_demo-init.zip?download=1"
-dest_file <- paste0(repo_dir, "2026_thermalRS_urban_heat_demo-init.zip")
+# Assuming the user has downloaded/cloned the GitHub repo 
 
-# Download the file using curl
-download.file(url = zip_url, destfile = dest_file, method = "curl")
+# UPDATE repo_dir variable to your local folder
+repo_dir <- "/Users/sscooley/Documents/GitHub/ARSET/2026/2026_thermalRS_urban_heat_demo/"
 
-# Unzip the downloaded file directly into the repo directory
-unzip(zipfile = dest_file, exdir = repo_dir)
+# Point directly to the data zip on Zenodo 
+zip_url <- "https://zenodo.org/api/records/20091125/files-archive" 
 
-# Define the data directory based on the unzipped contents
-data_dir <- paste0(repo_dir, "/2026_thermalRS_urban_heat_demo/ECOSTRESS_L2_data")
+dest_file <- file.path(repo_dir, "ECOSTRESS_L2_data.zip")
+data_dir <- file.path(repo_dir, "ECOSTRESS_L2_data")
 
+# Only download and unzip if the data isn't already there!
+if(!dir.exists(data_dir)) {
+  message("Downloading ECOSTRESS data from Zenodo. This may take a moment...")
+  
+  # Use libcurl to follow redirects, and mode="wb" for binary files
+  download.file(
+    url = zip_url, 
+    destfile = dest_file, 
+    method = "libcurl", 
+    mode = "wb"
+  )
+  
+  message("Unzipping data...")
+  unzip(zipfile = dest_file, exdir = data_dir)
+  
+  # Optional: delete the zip file to save space
+  file.remove(dest_file)
+} else {
+  message("Data directory already exists. Ready to go!")
+} 
+
+# Now map the files
 # Night 1: Sep 3 11:14 PM PDT (23 hrs into heatwave onset)
 night1 <- list(
   lst   = file.path(data_dir, "ECO_L2T_LSTE.002_LST_20240904T061421_aid0001_11N.tif"),
