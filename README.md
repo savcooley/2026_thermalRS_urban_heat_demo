@@ -62,7 +62,7 @@ The script uses two nighttime acquisitions over the LA region:
 
 ### Downloading the data
 
-Data used in the example area of interest (Los Angeles County, CA) is available here: https://doi.org/10.5281/zenodo.20091125  
+Data used in the example area of interest (Los Angeles County, CA) is available here: https://doi.org/10.5281/zenodo.20090795  
 
 Data for other areas of interest can be accessed via **NASA AppEEARS** (Earthdata login required):
 
