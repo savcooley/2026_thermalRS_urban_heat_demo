@@ -62,7 +62,9 @@ The script uses two nighttime acquisitions over the LA region:
 
 ### Downloading the data
 
-Data can be accessed via **NASA AppEEARS** (Earthdata login required):
+Data used in the example area of interest (Los Angeles County, CA) is available here: https://doi.org/10.5281/zenodo.20091125  
+
+Data for other areas of interest can be accessed via **NASA AppEEARS** (Earthdata login required):
 
 1. Go to [appeears.earthdatacloud.nasa.gov](https://appeears.earthdatacloud.nasa.gov)
 2. Submit an Area Sample request for product `ECO_L2T_LSTE.002`
